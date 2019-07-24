@@ -1,11 +1,15 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="todo_list.css">
   <title>Todo List</title>
 </head>
+
 <body style="width: 300px">
 
   <div class="container">
@@ -18,18 +22,7 @@
     </header>
 
     <ul class="list-group todos mx-auto text-light">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>Go to Malda</span>
-        <i class="far fa-trash-alt delete"></i>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>Trip to Jaipur</span>
-        <i class="far fa-trash-alt delete"></i>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>Buy a loaf of bread.</span>
-        <i class="far fa-trash-alt delete"></i>
-      </li>
+      
     </ul>
 
     <form class="add text-center my-4">
@@ -38,8 +31,32 @@
     </form>
 
   </div>
-  
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDpBVvbV1Nxs83ZLi1UXgauo1H2IXi3E7k",
+      authDomain: "todo-project-6bc2b.firebaseapp.com",
+      databaseURL: "https://todo-project-6bc2b.firebaseio.com",
+      projectId: "todo-project-6bc2b",
+      storageBucket: "todo-project-6bc2b.appspot.com",
+      messagingSenderId: "178886264432",
+      appId: "1:178886264432:web:fed8c48af467e7fd"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
 
   <script src="todo_list.js"></script>
+  <script src="database.js"></script>
 </body>
+
 </html>
